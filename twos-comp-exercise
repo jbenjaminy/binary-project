@@ -1,0 +1,36 @@
+'use strict';
+// -Take binary (positive) number:
+	// 	exp. 514: 00000000 00000000 00000010 00000010
+// -Create "One's compliment number" by inverting all bits:
+	// 	exp. "One's compliment" of 514: 
+	// 	11111111 11111111 11111101 11111101
+	// 	^
+	// 	this is the 'sign bit' -- tells us that number will be negative
+// -Create "Two's compliment number" by adding one to the "One's compliment"
+	// 	exp. "Two's compliment" of 514:
+	// 	11111111 11111111 11111101 11111110
+// ** Add 1 to it so that neg and pos zero both have same two-bit binary num '00'
+
+// EXERCISE:
+	// 	Implement a function that takes in an integer and prints out its two's complement value by following the algorithm described above. Hint: to invert the bits of a number you can use the "~" operator. For example ~25 will invert the bits of the integer 25.
+	// recursive function to convert integer to it's binary
+	// set up vars for each binary position (8-bit)
+	// convert using Two's Compliment Alg
+
+let intToBinary = (int) => {
+	var binary = binary || '';
+	var result = 0;
+	var remainder = '';
+	if (int / 2 === 0) {
+		remainder = int % 2;
+		binary = binary.concat(remainder);
+		return binary;
+	}
+
+	result = int / 2;
+	remainder = int % 2;
+	binary = binary.concat(remainder);
+	return intToBinary(result);
+}
+
+console.log(intToBinary(32));
