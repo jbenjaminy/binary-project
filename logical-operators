@@ -1,6 +1,6 @@
 'use strict';
 // & OPERATOR
-// Write a function that takes an integer value and checks to see if it is even or odd using the big-wise AND operator. Hint: Think about what the value of the least-significant bit will be for even and odd numbers.
+    // Write a function that takes an integer value and checks to see if it is even or odd using the big-wise AND operator. Hint: Think about what the value of the least-significant bit will be for even and odd numbers.
 
 let evenOrOdd = (int) => {
 	let valueA = 1;
@@ -13,38 +13,40 @@ let evenOrOdd = (int) => {
 }
 //console.log(evenOrOdd(2));
 
-// Why would using bit-wise operations be potentially faster for checking whether a number is even or odds as opposed to using something like the modulo operator (for example randInt % 2)?
-
+    // Why would using bit-wise operations be potentially faster for checking whether a number is even or odds as opposed to using something like the modulo operator (for example randInt % 2)?
         // Because binary operations are inherently faster, because its the native format the data is being stored, and it doesnt have to translate it back and forth.
 
 
-// Write a function that takes in two integer values and prints out the resultant value when you AND the two input values and then also when you OR the two input values.
-
-//0101
-//1111
+// OR (|) OPERATOR
+    // Write a function that takes in two integer values and prints out the resultant value when you AND the two input values and then also when you OR the two input values.
 
 let andOr =(int1, int2) => {
-    let and = (int1&int2); //101,  5
+    let and = (int1&int2); //0101,  5
     let or = (int1|int2);  //1111, 15
     return {'int1&int2': and,
             'int1|int2': or};
-
-
 }
- console.log(andOr(15, 5));
+ // console.log(andOr(15, 5));
+
+// XOR OPERATOR (^)
+    // Extend the previous function further by adding logic for the XOR operation when two integer values are input. Add a third parameter which denotes which type of operation to execute. Print out the resultant value for the associated operation type.
+
+let andOrXor =(int1, int2, operator) => {
+    let operation = [int1, operator, int2];
+        return eval(operation.join(''));
+}
+ console.log(andOrXor(15, 5, '^'));
 
 
-
-// OR (|) OPERATOR
-
-// let evenOrOdd = (int) => {
-// 	let valueA = 1;
-// 	let valueB = int;
-// 	let aAndB = (valueA&valueB).toString(2);
-// 	let leastSigBit = aAndB.substring(aAndB.length - 1);
-// 	if (leastSigBit == 1) {
-// 		return 'odd';
-// 	}
-// 	return 'even';
-// }
-// console.log(evenOrOdd(-3));//
+// ALTERNATE SOLUTION FOR & OPERATOR
+    // let evenOrOdd = (int) => {
+    // 	let valueA = 1;
+    // 	let valueB = int;
+    // 	let aAndB = (valueA&valueB).toString(2);
+    // 	let leastSigBit = aAndB.substring(aAndB.length - 1);
+    // 	if (leastSigBit == 1) {
+    // 		return 'odd';
+    // 	}
+    // 	return 'even';
+    // }
+    // console.log(evenOrOdd(-3));//
