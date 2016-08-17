@@ -17,23 +17,30 @@
 	// set up vars for each binary position (8-bit)
 	// convert using Two's Compliment Alg
 
-// CONVERTS AN INTEGER <= 225 INTO BINARY
-let intToBinary = (int, binary) => {
-	var binary = binary || '';
-	var result = 0;
-	var remainder = 0;
-	if (int / 2 < 1) {
-		remainder = int % 2;
-		binary = remainder.toString() + binary
-		for (var i = 0; i <= (8 - binary.length); i++) {
-			binary = '0' + binary;
-		}
-		return binary;
-	}
+// CONVERTS AN INTEGER INTO A 32-BIT BINARY
 
-	result = int / 2;
-	remainder = int % 2;
-	return intToBinary(result, (remainder.toString() + binary));
-}
 
-console.log(intToBinary(16));
+
+
+
+
+// let intToBinary = (int, binary) => {
+// 	var binary = binary || '';
+// 	var result = 0;
+// 	var remainder = 0;
+// 	if (int / 2 < 1) {
+// 		remainder = int % 2;
+// 		binary = remainder.toString() + binary;
+// 		var numZeros = 8 - binary.length;
+// 		for (var i = 0; i < (numZeros); i++) {
+// 			binary = '0'+ binary;
+// 		}
+// 		return binary;
+// 	}
+
+// 	result = int / 2;
+// 	remainder = int % 2;
+// 	return intToBinary(result, (remainder.toString() + binary));
+// }
+
+// console.log(intToBinary(5));
