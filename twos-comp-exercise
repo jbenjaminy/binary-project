@@ -1,8 +1,18 @@
 'use strict';
+
+
+let twosComplement = (int) => {
+	int = ~int;
+	return int = int + 1;
+}
+
+console.log(twosComplement(5));
+
+
 // -Take binary (positive) number:
 	// 	exp. 514: 00000000 00000000 00000010 00000010
 // -Create "One's compliment number" by inverting all bits:
-	// 	exp. "One's compliment" of 514: 
+	// 	exp. "One's compliment" of 514:
 	// 	11111111 11111111 11111101 11111101
 	// 	^
 	// 	this is the 'sign bit' -- tells us that number will be negative
