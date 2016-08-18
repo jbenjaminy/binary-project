@@ -1,13 +1,8 @@
-INTERVIEW QUESTIONS
+/* ----------- INTERVIEW QUESTIONS -----------*/
 
-	11111111
-    
-	(going from right to left)
-	([1]*2^(0) = 1) + ([1]*2^(1) = 2) + ([1]*2^(2) = 4) + ([1]*2^(3) = 8) + 
-	([1]*2^(4) = 16) + ([1]*2^(5) = 32) + ([1]*2^(6) = 64) + ([1]*2^(7) = 128) = 255
+/* What is 2^5 in binary? */
 
-
-* What is 2^5 in binary?
+    00100000
 
     32 / 2 = 16 (r.0)
     16 / 2 = 8 (r.0)
@@ -18,9 +13,9 @@ INTERVIEW QUESTIONS
 
     [1]*2^(5) => 32 => 2^(5)
 
-    00100000
-
-* What is 2^5 - 1 in binary?
+/* What is 2^5 - 1 in binary? */
+    
+    00011111
 
     31 / 2 = 15 (r.1)
     15 / 2 = 7 (r.1)
@@ -30,9 +25,15 @@ INTERVIEW QUESTIONS
 
     ([1]*1^(0) = 1) + ([1]*2^(1) = 2) + ([1]*2^(2) = 4) + ([1]*2^(3) = 8) + ([1]*2^(4) = 16) => 31 => 2^(5) - 1
 
-    00011111
-
-* What is the general rule for binary numbers which are or the form 2^n or 2^n - 1?
+/* What is the general rule for binary numbers which are or the form 2^n or 2^n - 1? */
 
     -For 2^n you would just have a '1' in position 'n'.
     -For 2^n - 1 you would have '1s' for every position before 'n'.
+
+/* NOTES */ 
+
+    11111111 = 255
+    
+    (going from right to left)
+    ([1]*2^(0) = 1) + ([1]*2^(1) = 2) + ([1]*2^(2) = 4) + ([1]*2^(3) = 8) + 
+    ([1]*2^(4) = 16) + ([1]*2^(5) = 32) + ([1]*2^(6) = 64) + ([1]*2^(7) = 128) 
