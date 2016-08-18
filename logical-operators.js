@@ -140,16 +140,3 @@ let isThirdSet = (num) => {
 } 
 
 console.log(isThirdSet(13));
-
-/*---------- ALTERNATE SOLUTION FOR 'evenOrOdd' ----------*/
-let evenOrOddAlt = (int) => {
- let valueA = 1;
- let valueB = int;
- let aAndB = (valueA&valueB).toString(2);
- let leastSigBit = aAndB.substring(aAndB.length - 1);
- if (leastSigBit == 1) {
-     return 'odd';
- }
- return 'even';
-}
-// console.log(evenOrOddAlt(-3));
