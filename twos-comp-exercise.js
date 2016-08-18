@@ -10,7 +10,7 @@ let twosComp = (int) => {
 
 // CONVERTS AN INTEGER INTO A 32-BIT BINARY, PASS INTEGER AND '+' OR '-'
 	// TODO: FIGURE OUT HOW TO 'ADD ONE' AT THE END
-let intToBinary = (int, sign, bin) => {
+let intToBin = (int, sign, bin) => {
 	var bin = bin || '';
 	var remainder = int % 2;
 
@@ -26,7 +26,7 @@ let intToBinary = (int, sign, bin) => {
 	
 	int = int / 2;
 
-	return intToBinary(int, sign, (remainder.toString() + bin));
+	return intToBin(int, sign, (remainder.toString() + bin));
 }
 
 let binInvert = (bin) => {
@@ -49,4 +49,4 @@ let padBin = (bin, sign) => {
 	return bin;
 }
 
-intToBinary(514, '+');
+intToBin(6, '+');
